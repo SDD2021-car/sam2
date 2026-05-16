@@ -438,6 +438,7 @@ def build_hint_masks_from_label_map(
         add_delta_with_cap(best_idx, best_dot)
 
     return hint_masks, hint_all, label_ids, allocations, target_total
+
 def generate_color_hint(image, hint_mask):
     """
     在 hint_mask 位置保留原图像素，其余设为黑色，得到 color hint。
@@ -522,7 +523,7 @@ def generate_hint_masks(
         min_delta_area=10,
         rng_seed=33,
         image=image,
-        histogram_threshold=0.6,
+        histogram_threshold=0,
         histogram_bins=16,
     )
     if hint_params:

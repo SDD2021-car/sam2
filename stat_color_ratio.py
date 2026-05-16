@@ -47,8 +47,8 @@ def color_ratio_nonblack(img_path: Path, black_rgb_thresh: int = 25) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description="统计黑底图片非黑像素占比，并导出表格")
-    parser.add_argument("--input_dir", default="/data/yjy_data/SAM2/hint_outputs_train_scene_try2/color_hint_by_dots", help="输入文件夹（递归遍历）")
-    parser.add_argument("--out", type=str, default="color_ratio_train_scene2.xlsx", help="输出Excel路径")
+    parser.add_argument("--input_dir", default="/data/yjy_data/SAM2/1", help="输入文件夹（递归遍历）")
+    parser.add_argument("--out", type=str, default="color_ratio_1.xlsx", help="输出Excel路径")
     parser.add_argument("--csv", type=str, default="", help="可选：同时输出CSV路径")
     parser.add_argument("--black_rgb_thresh", type=int, default=25, help="近黑RGB阈值(越大越把暗像素当黑)")
     args = parser.parse_args()
